@@ -10,8 +10,17 @@ namespace VariablesAndOperators
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Name of Doctor: ");
-           
+            //donor info
+            Console.WriteLine("Name of donor:");
+            string don = Console.ReadLine() ;
+
+            Console.WriteLine("Address of donor: ");
+            string address = Console.ReadLine();
+
+            Console.WriteLine("Email adress of donor: ");
+            string email = Console.ReadLine();
+
+            //donation imput
             Console.WriteLine("How many quarters donated?");
             double quarters = double.Parse(Console.ReadLine());
 
@@ -34,7 +43,7 @@ namespace VariablesAndOperators
             double hundreds = double.Parse(Console.ReadLine());
 
 
-
+            // donation tally
             double totalQuarters = quarters * .25d;
             double totalDollars = dollars * 1d;
             double totalFives = fives * 5d;
@@ -43,7 +52,16 @@ namespace VariablesAndOperators
             double totalFties = fties * 50d;
             double totalHundreds = hundreds * 100d; 
             
-            Console.WriteLine(totalQuarters + totalDollars + totalFives + totalTens + totalTwonties + totalFties + totalHundreds);
+            double donationTotal = totalQuarters + totalDollars + totalFives + totalTens + totalTwonties + totalFties + totalHundreds;
+
+            //receipte print
+
+            Console.WriteLine("Name: " + don);
+            Console.WriteLine("Adress: " + address);
+            Console.WriteLine("Email: " + email);
+            Console.WriteLine(" Fiscal year: 2017");
+            Console.WriteLine("Donation total: " + donationTotal);
+
         }
     }
 }
